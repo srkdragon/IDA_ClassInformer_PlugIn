@@ -15,6 +15,10 @@ const static char NETNODE_NAME[] = {"$ClassInformer_node"};
 const char NN_DATA_TAG  = 'A';
 const char NN_TABLE_TAG = 'S';
 
+/// Maximum length of strings or objects stored in a supval array element
+// Commented out in "netnode.hpp"
+const int MAXSPECSIZE = 1024;
+
 // Our netnode value indexes
 enum NETINDX
 {
@@ -1617,18 +1621,18 @@ static BOOL gatherRttiDataSet(SegSelect::segments &segs)
 
 static char _comment[] = "Class Informer: Locates and fixes C++ Run Time Type class and structure information.";
 static char _help[] = "";
-static char _name[] = "Class Informer";
+static char _name[] = "ClassInformer";
 
 // Plug-in description block
 __declspec(dllexport) plugin_t PLUGIN =
 {
 	IDP_INTERFACE_VERSION,	// IDA version plug-in is written for
-    PLUGIN_FIX /*PLUGIN_PROC*/,        // Plug-in flags
+    PLUGIN_PROC,        // Plug-in flags
 	init,	            // Initialization function
 	term,	            // Clean-up function
 	run,	            // Main plug-in body
 	_comment,	        // Comment
 	_help,	            // Help
 	_name,	            // Plug-in name shown in Edit->Plugins menu
-	NULL	            // Hot key to run the plug-in
+	"Alt-2"             // Hot key to run the plug-in
 };

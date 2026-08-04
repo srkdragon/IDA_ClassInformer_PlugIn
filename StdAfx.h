@@ -24,6 +24,9 @@
 #pragma warning(disable:4267) // conversion from 'size_t' to 'uint32', possible loss of data
 #pragma warning(disable:4018) // warning C4018: '<': signed/unsigned mismatch
 #include <ida.hpp>
+// Until it actually happens
+#undef DEPRECATED
+#define DEPRECATED
 #include <auto.hpp>
 #include <loader.hpp>
 #include <search.hpp>
@@ -60,4 +63,4 @@ typedef std::set<ea_t> eaSet;
 //#define QT_RES_PATH "C:/Projects/IDA_Pro_Work/IDA_ClassInformer_PlugIn/res/"
 #define QT_RES_PATH ":/res/"
 
-#define MY_VERSION MAKE_SEMANTIC_VERSION(VERSION_RELEASE, 6, 0, 2)
+#define MY_VERSION MAKE_SEMANTIC_VERSION(VERSION_RELEASE, 6, 0, 3)

@@ -204,7 +204,6 @@
  </widget>
  <resources>
   <include location="ClassInformerRes.qrc"/>
-  <include location="ClassInformerRes.qrc"/>
  </resources>
  <connections>
   <connection>

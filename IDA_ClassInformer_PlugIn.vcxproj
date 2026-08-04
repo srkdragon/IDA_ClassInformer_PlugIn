@@ -184,7 +184,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>ida.lib;Winmm.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_vc_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -193,12 +193,9 @@
       <ImportLibrary>
       </ImportLibrary>
     </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(SolutionDir)Debug\IDA_RTTI_Informer_PlugIn.bsc</OutputFile>
-    </Bscmake>
+    <Bscmake />
     <PostBuildEvent>
-      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>copy "$(OutDir)$(TargetFileName)" "%APPDATA%/Hex-Rays/IDA Pro/plugins"</Command>
     </PostBuildEvent>
     <QtMoc>
       <QtMocDir>$(QtIntDir)moc\</QtMocDir>
@@ -219,14 +216,6 @@
       <DynamicSource>output</DynamicSource>
       <ParallelProcess>true</ParallelProcess>
       <QmlCacheGenerate>false</QmlCacheGenerate>
-      <QmlCacheGenMessage>Qt Quick Compiler: compiling %&lt;Identity&gt; ahead of time</QmlCacheGenMessage>
-      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
-      <QmlCacheFilterMessage>Qt Quick Compiler: filtering %(Identity)</QmlCacheFilterMessage>
-      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
-      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
-      <QmlCacheFilteredInitFuncName>%(Filename)_qmlcache</QmlCacheFilteredInitFuncName>
-      <QmlCacheLoaderMessage>Qt Quick Compiler: generating cache loader</QmlCacheLoaderMessage>
-      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
     </QtRcc>
     <QtUic>
       <ExecutionDescription>uic %(Identity)</ExecutionDescription>
@@ -266,7 +255,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>ida.lib;Winmm.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_vc_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -278,12 +267,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(SolutionDir)Debug\IDA_RTTI_Informer_PlugIn.bsc</OutputFile>
-    </Bscmake>
+    <Bscmake />
     <PostBuildEvent>
-      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>copy "$(OutDir)$(TargetFileName)" "%APPDATA%/Hex-Rays/IDA Pro/plugins"</Command>
     </PostBuildEvent>
     <QtMoc>
       <QtMocDir>$(QtIntDir)moc\</QtMocDir>
@@ -304,14 +290,6 @@
       <DynamicSource>output</DynamicSource>
       <ParallelProcess>true</ParallelProcess>
       <QmlCacheGenerate>false</QmlCacheGenerate>
-      <QmlCacheGenMessage>Qt Quick Compiler: compiling %&lt;Identity&gt; ahead of time</QmlCacheGenMessage>
-      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
-      <QmlCacheFilterMessage>Qt Quick Compiler: filtering %(Identity)</QmlCacheFilterMessage>
-      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
-      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
-      <QmlCacheFilteredInitFuncName>%(Filename)_qmlcache</QmlCacheFilteredInitFuncName>
-      <QmlCacheLoaderMessage>Qt Quick Compiler: generating cache loader</QmlCacheLoaderMessage>
-      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
     </QtRcc>
     <QtUic>
       <ExecutionDescription>uic %(Identity)</ExecutionDescription>
@@ -351,7 +329,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>ida.lib;Winmm.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_vc_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -363,12 +341,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(SolutionDir)Debug\IDA_RTTI_Informer_PlugIn.bsc</OutputFile>
-    </Bscmake>
+    <Bscmake />
     <PostBuildEvent>
-      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>copy "$(OutDir)$(TargetFileName)" "%APPDATA%/Hex-Rays/IDA Pro/plugins"</Command>
     </PostBuildEvent>
     <QtMoc>
       <QtMocDir>$(QtIntDir)moc\</QtMocDir>
@@ -389,14 +364,6 @@
       <DynamicSource>output</DynamicSource>
       <ParallelProcess>true</ParallelProcess>
       <QmlCacheGenerate>false</QmlCacheGenerate>
-      <QmlCacheGenMessage>Qt Quick Compiler: compiling %&lt;Identity&gt; ahead of time</QmlCacheGenMessage>
-      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
-      <QmlCacheFilterMessage>Qt Quick Compiler: filtering %(Identity)</QmlCacheFilterMessage>
-      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
-      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
-      <QmlCacheFilteredInitFuncName>%(Filename)_qmlcache</QmlCacheFilteredInitFuncName>
-      <QmlCacheLoaderMessage>Qt Quick Compiler: generating cache loader</QmlCacheLoaderMessage>
-      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
     </QtRcc>
     <QtUic>
       <ExecutionDescription>uic %(Identity)</ExecutionDescription>

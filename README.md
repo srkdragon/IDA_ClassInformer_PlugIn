@@ -13,6 +13,14 @@ Based on Igor Skochinsky’s article, [Reversing Microsoft Visual C++](http://ww
 
 #### Update & Status
 
+##### IDA  9.4
+
+Had to replace the PLUGIN_FIX plugin flag with PLUGIN_PROC to get the plugin to even show up now.  
+Apparently Hex-Rays changed or "fixed" some of the plugin DLL loader code. And I recall I only used PLUGIN_FIX because I had to previously to get the plugin to load properly.   
+This also broke the usual "plugins.cfg" way to load the plugin for unknown reasons. I set the default hot key via the passed "plugin_t" struct as "Alt-2" (my preference) which fixes the issue. Hopefully doesn't create an issue for people. Can always just run the plugin like any other from the Edit->Plugins menu.
+
+##### IDA  9.2
+
 Long overdue for an update. In particular for major IDA Pro version 9 (now 9.2).
 
 * Has been for a while since , most certainly with version 9, that IDA's own built-in *rtti.dll* plugin does an excellent job of finding and labeling RTTI data.
