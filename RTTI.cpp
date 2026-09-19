@@ -47,6 +47,7 @@ static eaSet chdSet; // _RTTIClassHierarchyDescriptor "Class Hierarchy Descripto
 static eaSet bcdSet; // _RTTIBaseClassDescriptor "Base Class Descriptor" (BCD) set
 eaSet vftSet;    // `vftable'
 eaSet colSet;    // _RTTICompleteObjectLocator "Complete Object Locator" (COL) set
+static eaSet vbtSet; // `vbtable' (virtual base table, "??_8")
 eaSet superSet;  // Combined for faster scanning
 
 #define IN_SUPER(_addr) (superSet.find(_addr) != superSet.end())
@@ -65,6 +66,7 @@ void RTTI::freeWorkingData()
     bcdSet.clear();
     colSet.clear();
     vftSet.clear();
+    vbtSet.clear();
     superSet.clear();
 }
 
@@ -76,6 +78,13 @@ static LPSTR mangleNumber(UINT32 number, __out_bcount(64) LPSTR buffer)
 	// X = X-1 (1 <= X <= 10)
 	// -X = ? (X - 1)
 	// 0x0..0xF = 'A'..'P'
+	//
+	// Hex form is written most-significant nibble first, terminated with '@':
+	// 0x10=16 -> "BA@", 0x40=64 -> "EA@", 0x88=136 -> "II@". Validated by round-tripping
+	// every BCD name in the VS2026 x86/x64 corpus against the linker map (see
+	// RE/MSVC-RTTI-Layout.md). The previous code emitted nibbles LSB first
+	// (64 -> "AE@"), producing invalid labels for any displacement or attribute
+	// value > 10 with asymmetric nibbles.
 
 	// Can only get unsigned inputs
 	int num = *((PINT32) &number);
@@ -97,19 +106,27 @@ static LPSTR mangleNumber(UINT32 number, __out_bcount(64) LPSTR buffer)
 		}
 		else
 		{
-			// Count digits
+			// Digits accumulate LSB first
 			char buffer2[64];
-			int  count = sizeof(buffer2);
+			int  count = 0;
 
-			while((num > 0) && (count > 0))
+			while((num > 0) && (count < (int) sizeof(buffer2)))
 			{
-				buffer2[sizeof(buffer2) - count] = ('A' + (num % 16));
+				buffer2[count++] = (char) ('A' + (num % 16));
 				num = (num / 16);
-				count--;
 			};
 
-			if(count == 0)
+			if(num > 0)
 				msg(" *** mangleNumber() overflow! ***");
+
+			// Reverse to MSB-first order
+			for(int l = 0, r = (count - 1); l < r; l++, r--)
+			{
+				char t = buffer2[l];
+				buffer2[l] = buffer2[r];
+				buffer2[r] = t;
+			}
+			buffer2[count] = 0;
 
 			_snprintf_s(buffer, 64, (64-1), "%s%s@", (sign ? "?" : ""), buffer2);
 			return buffer;
@@ -119,14 +136,19 @@ static LPSTR mangleNumber(UINT32 number, __out_bcount(64) LPSTR buffer)
 
 
 // Return a short label indicating the CHD inheritance type by attributes
-// TODO: Consider CHD_AMBIGUOUS?
+// CHD_AMBIGUOUS (0x04) is appended when set: verified on a corpus class with two
+// non-virtual copies of the same base (CHD attributes == MI|AMBIGUOUS == 5).
 static LPCSTR attributeLabel(UINT32 attributes)
 {
-    switch (attributes & 3)
+    switch (attributes & 7)
     {
-        case RTTI::CHD_MULTINH: return "[MI]";
-        case RTTI::CHD_VIRTINH: return "[VI]";
+        case RTTI::CHD_MULTINH:   return "[MI]";
+        case RTTI::CHD_VIRTINH:   return "[VI]";
         case (RTTI::CHD_MULTINH | RTTI::CHD_VIRTINH): return "[MI VI]";
+        case RTTI::CHD_AMBIGUOUS: return "[AMB]";
+        case (RTTI::CHD_MULTINH | RTTI::CHD_AMBIGUOUS): return "[MI AMB]";
+        case (RTTI::CHD_VIRTINH | RTTI::CHD_AMBIGUOUS): return "[VI AMB]";
+        case (RTTI::CHD_MULTINH | RTTI::CHD_VIRTINH | RTTI::CHD_AMBIGUOUS): return "[MI VI AMB]";
     };
     return "";
 }
@@ -420,10 +442,10 @@ static BOOL tryStructRTTI(ea_t ea, tid_t tid, __in_opt LPSTR typeName = NULL, BO
                     create_strlit((ea + offsetof(RTTI::type_info_32, _M_d_name)), nameLen, STRTYPE_C);
                 }
 
-                // sh!ft: End should be aligned
+                // sh!ft: End should be aligned (pointer size; see RE/MSVC-RTTI-Layout.md)
                 ea_t end = (ea + offsetof(RTTI::type_info_32, _M_d_name) + nameLen);
-                if (end % 4)
-                    create_align(end, (4 - (end % 4)), 0);
+                if (end % plat.ptrSize)
+                    create_align(end, (plat.ptrSize - (end % plat.ptrSize)), 0);
 
                 return TRUE;
             }
@@ -450,10 +472,12 @@ static BOOL tryStructRTTI(ea_t ea, tid_t tid, __in_opt LPSTR typeName = NULL, BO
                 }
 
                 // sh!ft: End should be aligned
-             #pragma message(__LOC2__ "  >> Should be align 8? Do we really even need this?")
+                // Empirically (VS2026 corpus, see RE/MSVC-RTTI-Layout.md): the next object
+                // after a 64-bit TypeDescriptor is 8-byte aligned, so align to pointer size.
                 ea_t end = (ea + offsetof(RTTI::type_info_64, _M_d_name) + nameLen);
-                if (end % 4)
-                    create_align(end, (4 - (end % 4)), 0);
+                UINT32 align = plat.ptrSize;
+                if (end % align)
+                    create_align(end, (align - (end % align)), 0);
 
                 return TRUE;
             }
@@ -605,7 +629,7 @@ static int getIdaString(ea_t ea, __out LPSTR buffer, int bufferSize)
         int len = (int) strlen(str);
         if (len > bufferSize)
 			len = bufferSize;
-        strncpy_s(buffer, MAXSTR, str, len);
+        strncpy_s(buffer, bufferSize, str, len);
         return len;
     }
     else
@@ -766,7 +790,10 @@ BOOL RTTI::_RTTICompleteObjectLocator::isValid(ea_t col)
                 // 64bit bases plus objectBase offsets
 				if (signature == 1)
 				{
-					// TODO: Can any of these be zero and still be valid?
+					// None of these can be zero in a valid REV1 COL: pSelf is the COL's own
+					// RVA (never 0), and the typeDescriptor/classDescriptor image-relative
+					// offsets would land on the PE header at RVA 0 (never a valid RTTI
+					// object). Verified across the VS2026 corpus (RE/MSVC-RTTI-Layout.md).
 					UINT32 objectLocator32 = get_32bit(col + offsetof(_RTTICompleteObjectLocator_64, objectBase));
                     INT64 objectLocator64 = TO_INT64(objectLocator32);
 					if (objectLocator64 != 0)
@@ -1011,8 +1038,9 @@ void RTTI::_RTTIBaseClassDescriptor::tryStruct(ea_t bcd, __out_bcount(MAXSTR) LP
         else
         {
             // When 64bit plus COL bass ea_t
-			UINT32 tdOffset = get_32bit(bcd + offsetof(_RTTIBaseClassDescriptor, typeDescriptor));
-			typeInfo = (colBase64 + (ea_t)tdOffset);
+			UINT32 tdOffset32 = get_32bit(bcd + offsetof(_RTTIBaseClassDescriptor, typeDescriptor));
+			INT64 tdOffset64 = TO_INT64(tdOffset32);
+			typeInfo = (ea_t) (colBase64 + tdOffset64);
         }
         type_info::tryStruct(typeInfo);
 
@@ -1743,7 +1771,8 @@ BOOL RTTI::gatherKnownRttiData()
             PATE("??_R1", "`RTTI Base Class Descriptor", &bcdSet),
             PATE("??_R3", "`RTTI Class Hierarchy Descriptor'", &chdSet),
             PATE("??_R4", "`RTTI Complete Object Locator'", &colSet),
-            PATE("??_7", "`vftable'", &vftSet)
+            PATE("??_7", "`vftable'", &vftSet),
+            PATE("??_8", "`vbtable'", &vbtSet)
         };
 
 	    // Walk all names in the IDB
@@ -1791,5 +1820,82 @@ BOOL RTTI::gatherKnownRttiData()
 	    for (const eaSet *sp: all) superSet.insert(sp->begin(), sp->end());
 	}
 	CATCH()
+    return FALSE;
+}
+
+
+// ===============================================================================================
+
+// Fix `vbtable's ("??_8") that IDA named but left mis-analyzed as code.
+//
+// Verified layout (VS2026 x86/x64 corpus, see RE/VBTables-and-Virtual-Inheritance.md):
+// a vbtable is an array of 4-byte signed displacements on BOTH architectures (x64
+// included), always exactly 1 + numberOfVirtualBases entries, followed by zero padding
+// and/or the next object.  entry[0] is the negative displacement back to the owning
+// subobject start (-(vbptr offset), i.e. -4 on x86 / -8 on x64 in the corpus);
+// entry[i] is the displacement of the i-th virtual base FROM THE VBPTR field.
+// Virtual base subobject resolution: base = obj + pdisp + entry[vdisp/4].
+//
+// IDA 9.x's RTTI pass names vbtables but does not correct item types, so the
+// auto-analyzer's code items (e.g. "clc", "sar [rdx+rcx+40h], 1") survive and
+// hurt readability.  Convert them to proper dword arrays with a decode comment.
+// Returns TRUE if user aborted.
+BOOL RTTI::fixKnownVbtables()
+{
+    UINT32 fixedCount = 0;
+
+    try
+    {
+        for (ea_t ea : vbtSet)
+        {
+            flags_t flags = get_flags(ea);
+            if (!is_code(flags))
+                continue; // Already data (or unknown); leave it to IDA/user
+
+            // Determine the entry run: small non-zero signed displacements,
+            // terminated by zero padding or an implausible value
+            ea_t end = ea;
+            while (IS_VALID_ADDR(end) && ((end - ea) < 256))
+            {
+                UINT32 value = get_32bit(end);
+                if (value == 0)
+                    break;
+                INT64 displacement = TO_INT64(value);
+                if ((displacement < -0x10000) || (displacement > 0x10000))
+                    break;
+                end += sizeof(UINT32);
+            }
+
+            if (end > ea)
+            {
+                // Convert to dword array
+                setUnknown(ea, (end - ea));
+                for (ea_t p = ea; p < end; p += sizeof(UINT32))
+                    create_dword(p, sizeof(UINT32), TRUE);
+
+                // Document the layout once
+                if (!hasComment(ea))
+                {
+                    setComment(ea, "`vbtable': 4-byte signed entries. entry[0] = -(vbptr offset in owning subobject);"
+                        " entry[i] = displacement of i-th virtual base from the vbptr field."
+                        " base = obj + pdisp + entry[vdisp/4] (#classinformer)", TRUE);
+                }
+
+                fixedCount++;
+            }
+
+            if (WaitBox::isUpdateTime())
+                if (WaitBox::updateAndCancelCheck())
+                    return TRUE;
+        }
+    }
+    CATCH()
+
+    if (fixedCount)
+    {
+        char buffer[32];
+        msg("Fixed mis-analyzed vbtables: %s\n", NumberCommaString(fixedCount, buffer));
+    }
+
     return FALSE;
 }

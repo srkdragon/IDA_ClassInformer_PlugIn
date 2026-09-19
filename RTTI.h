@@ -43,13 +43,17 @@ namespace RTTI
 	// "Base Class Descriptor" (BCD)
     // Describes all base classes together with information to derived class access dynamically
     // attributes flags
+    // Note: values/naming per MSVC "rttidata.h" (VS2026, MSVC 14.5x); verified empirically
+    // against VS2026 x86/x64 output (see RE/MSVC-RTTI-Layout.md). The 0x04/0x08 constants were
+    // previously swapped here: a private/protected base BCD measures 0x4D =
+    // NOTVISIBLE|PRIVORPROTBASE|PRIVORPROTINCOMPOBJ|HASPCHD.
     const UINT32 BCD_NOTVISIBLE          = 0x01;
     const UINT32 BCD_AMBIGUOUS           = 0x02;
-    const UINT32 BCD_PRIVORPROTINCOMPOBJ = 0x04;
-    const UINT32 BCD_PRIVORPROTBASE      = 0x08;
+    const UINT32 BCD_PRIVORPROTBASE      = 0x04;
+    const UINT32 BCD_PRIVORPROTINCOMPOBJ = 0x08;
     const UINT32 BCD_VBOFCONTOBJ         = 0x10;
     const UINT32 BCD_NONPOLYMORPHIC      = 0x20;
-    const UINT32 BCD_HASPCHD             = 0x40; // pClassDescriptor field is present
+    const UINT32 BCD_HASPCHD             = 0x40; // pClassDescriptor field is present (always set in observed MSVC output)
 //
     struct _RTTIBaseClassDescriptor
 	{
@@ -92,9 +96,13 @@ namespace RTTI
 	#endif
 
     // "Complete Object Locator" (COL) location of the complete object from a specific vftable pointer
+    // Signature is a format revision (MSVC rttidata.h: COL_SIG_REV0/REV1), static in the image:
+    // 0 = REV0, 32-bit form with absolute VA pointers; 1 = REV1, 64-bit form where
+    // typeDescriptor/classDescriptor/objectBase are image-relative 32-bit offsets.
+    // Verified constant across all VS2026 x86/x64 corpus classes (RE/MSVC-RTTI-Layout.md).
 	struct _RTTICompleteObjectLocator
 	{
-		UINT32 signature;		// 00 32bit zero, 64bit one, until loaded
+		UINT32 signature;		// 00 32bit zero (REV0), 64bit one (REV1), until loaded
 		UINT32 offset;			// 04 Offset of this vftable in the complete class
 		UINT32 cdOffset;		// 08 Constructor displacement offset
 		int typeDescriptor;	    // 0C (type_info *) of the complete class. Pointer EA_32 for 32bit, offset added to ea_t for 64bit
@@ -111,7 +119,8 @@ namespace RTTI
 
     struct __declspec(novtable) _RTTICompleteObjectLocator_64 : _RTTICompleteObjectLocator
 	{
-        int objectBase;  // 14 Object base offset (base = ptr col - objectBase)
+        int objectBase;  // 14 Image-relative offset of this COL itself ("pSelf" in MSVC rttidata.h).
+                         // col - objectBase = image base; all REV1 offsets resolve against it.
 	};
 	#pragma pack(pop)
 
@@ -120,6 +129,7 @@ namespace RTTI
     void freeWorkingData();
 	void addDefinitionsToIda();
 	BOOL gatherKnownRttiData();
+    BOOL fixKnownVbtables();
     BOOL processVftable(ea_t eaTable, ea_t col, BOOL known = FALSE);
 }
 

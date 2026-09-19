@@ -426,7 +426,7 @@ bool idaapi run(size_t arg)
             if (cmp != COMP_MS)
             {
                 msg("** IDA reports target compiler: \"%s\"\n", get_compiler_name(cmp));
-                int iResult = ask_buttons(NULL, NULL, NULL, 0, "TITLE Class Informer\nHIDECANCEL\nIDA reports this IDB's compiler as: \"%s\" \n\nThis plug-in only understands MS Visual C++ targets.\nRunning it on other targets (like Borland© compiled, etc.) will have unpredicted results.   \n\nDo you want to continue anyhow?", get_compiler_name(cmp));
+                int iResult = ask_buttons(NULL, NULL, NULL, 0, "TITLE Class Informer\nHIDECANCEL\nIDA reports this IDB's compiler as: \"%s\" \n\nThis plug-in only understands MS Visual C++ targets.\nRunning it on other targets (like Borlandâ„¢ compiled, etc.) will have unpredicted results.   \n\nDo you want to continue anyhow?", get_compiler_name(cmp));
                 if (iResult != 1)
                 {
                     msg("- Aborted -\n\n");
@@ -1384,8 +1384,9 @@ static BOOL scanSeg4Cols(segment_t *seg)
                 if (!IN_SUPER(ptr))
                 {
                     // Check for possible COL here
-                    // Signature will be one
-                    // TODO: Is this always 1 or can it be zero like 32bit?
+                    // Signature is always 1 (COL_SIG_REV1, image-relative 64-bit form);
+                    // 0 (REV0) is the 32-bit absolute-address form only. Verified across
+                    // the full VS2026 x64 corpus (see RE/MSVC-RTTI-Layout.md).
                     if (get_32bit(ptr + offsetof(RTTI::_RTTICompleteObjectLocator_64, signature)) == 1)
                     {
                         if (RTTI::_RTTICompleteObjectLocator_64::isValid(ptr))
@@ -1609,6 +1610,13 @@ static BOOL gatherRttiDataSet(SegSelect::segments &segs)
 		msg("-------------------------------------------------\n");
         WaitBox::processIdaEvents();
         if(findVftables(segs))
+			return TRUE;
+
+        // ==== Fix vbtables IDA left mis-analyzed as code
+        msg("\nFixing vbtables:\n");
+		msg("-------------------------------------------------\n");
+        WaitBox::processIdaEvents();
+        if(RTTI::fixKnownVbtables())
 			return TRUE;
     }
     CATCH()
