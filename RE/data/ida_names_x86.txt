@@ -1,0 +1,77 @@
+Opening: D:\Sources\IDA_ClassInformer_PlugIn\RE\test\rtti_corpus_x86.exe...
+Database opened successfully.
++---------+------------------------------------------------------------------------------+
+| addr    | name                                                                         | 
++---------+------------------------------------------------------------------------------+
+| 4705876 | ??_7CSI_Base@@6B@                                                            | 
+| 4705904 | ??_7CSI_Mid@@6B@                                                             | 
+| 4705936 | ??_7CSI_Leaf@@6B@                                                            | 
+| 4705968 | ??_7SSPolyBase@@6B@                                                          | 
+| 4705984 | ??_7SSPolyMid@@6B@                                                           | 
+| 4706004 | ??_7CPlain@@6B@                                                              | 
+| 4706072 | ??_7CMI_A@@6B@                                                               | 
+| 4706088 | ??_7CMI_B@@6B@                                                               | 
+| 4706104 | ??_7CMI_C@@6B@                                                               | 
+| 4706120 | ??_7CMI_Two@@6BCMI_A@@@                                                      | 
+| 4706140 | ??_7CMI_Two@@6BCMI_B@@@                                                      | 
+| 4706156 | ??_7CMI_Three@@6BCMI_A@@@                                                    | 
+| 4706172 | ??_7CMI_Three@@6BCMI_B@@@                                                    | 
+| 4706188 | ??_7CMI_Three@@6BCMI_C@@@                                                    | 
+| 4706204 | ??_7CPad_A@@6B@                                                              | 
+| 4706220 | ??_7CPad_B@@6B@                                                              | 
+| 4706236 | ??_7CMI_BigOffset@@6BCPad_A@@@                                               | 
+| 4706252 | ??_7CMI_BigOffset@@6BCPad_B@@@                                               | 
+| 4706268 | ??_7CVBase@@6B@                                                              | 
+| 4706288 | ??_7CVLeft@@6B0@@                                                            | 
+| 4706300 | ??_7CVLeft@@6BCVBase@@@                                                      | 
+| 4706316 | ??_8CVLeft@@7B@                                                              | 
+| 4706332 | ??_7CVRight@@6B0@@                                                           | 
+| 4706344 | ??_7CVRight@@6BCVBase@@@                                                     | 
+| 4706360 | ??_8CVRight@@7B@                                                             | 
+| 4706376 | ??_7CDiamond@@6BCVLeft@@@                                                    | 
+| 4706388 | ??_7CDiamond@@6BCVRight@@@                                                   | 
+| 4706400 | ??_7CDiamond@@6BCVBase@@@                                                    | 
+| 4706416 | ??_8CDiamond@@7BCVLeft@@@                                                    | 
+| 4706428 | ??_8CDiamond@@7BCVRight@@@                                                   | 
+| 4706444 | ??_7CMix_Plain@@6B@                                                          | 
+| 4706460 | ??_7CMixFinal@@6B@                                                           | 
+| 4706476 | ??_7CMixFinal@@6BCVLeft@@@                                                   | 
+| 4706488 | ??_7CMixFinal@@6BCVRight@@@                                                  | 
+| 4706500 | ??_7CMixFinal@@6BCVBase@@@                                                   | 
+| 4706516 | ??_8CMixFinal@@7BCVLeft@@@                                                   | 
+| 4706528 | ??_8CMixFinal@@7BCVRight@@@                                                  | 
+| 4706544 | ??_7CAmb_Root@@6B@                                                           | 
+| 4706560 | ??_7CAmb_L@@6B@                                                              | 
+| 4706576 | ??_7CAmb_R@@6B@                                                              | 
+| 4706592 | ??_7CAmbiguous@@6BCAmb_L@@@                                                  | 
+| 4706608 | ??_7CAmbiguous@@6BCAmb_R@@@                                                  | 
+| 4706624 | ??_7IInterface@@6B@                                                          | 
+| 4706648 | ??_7CImpl@@6B@                                                               | 
+| 4706672 | ??_7CNamespaced@inner@deep@@6B@                                              | 
+| 4706688 | ??_7CNestedInner@CNestedOuter@inner@deep@@6B@                                | 
+| 4706704 | ??_7?$Tmpl@H$09@@6B@                                                         | 
+| 4706724 | ??_7?$Tmpl@N$0CA@@@6B@                                                       | 
+| 4706744 | ??_7CD1@@6B@                                                                 | 
+| 4706760 | ??_7CD2@@6B@                                                                 | 
+| 4706776 | ??_7CD3@@6B@                                                                 | 
+| 4706796 | ??_7CD4@@6B@                                                                 | 
+| 4706820 | ??_7CD5@@6B@                                                                 | 
+| 4706848 | ??_7CThisIsAVeryLongClassNameToTestTheNameBufferHandlingInClassInformer@@6B@ | 
+| 4706864 | ??_7CAccess_Base@@6B@                                                        | 
+| 4706888 | ??_7CPriv_Direct@@6B@                                                        | 
+| 4707176 | ??_7type_info@@6B@                                                           | 
+| 4707188 | ??_7exception@std@@6B@                                                       | 
+| 4707228 | ??_7bad_cast@std@@6B@                                                        | 
+| 4707244 | ??_7bad_typeid@std@@6B@                                                      | 
+| 4707260 | ??_7__non_rtti_object@std@@6B@                                               | 
+| 4708340 | ??_7CProt_Direct@@6B@                                                        | 
+| 4708356 | ??_7CPriv_Leaf@@6B@                                                          | 
+| 4711720 | ??_7DNameNode@@6B@                                                           | 
+| 4711744 | ??_7charNode@@6B@                                                            | 
+| 4711768 | ??_7pcharNode@@6B@                                                           | 
+| 4711792 | ??_7pDNameNode@@6B@                                                          | 
+| 4711816 | ??_7DNameStatusNode@@6B@                                                     | 
+| 4711840 | ??_7pairNode@@6B@                                                            | 
+| 4712244 | ??_7bad_exception@std@@6B@                                                   | 
++---------+------------------------------------------------------------------------------+
+70 row(s)

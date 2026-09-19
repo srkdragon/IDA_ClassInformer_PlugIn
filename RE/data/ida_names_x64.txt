@@ -1,0 +1,77 @@
+Opening: D:\Sources\IDA_ClassInformer_PlugIn\RE\test\rtti_corpus_x64.exe...
+Database opened successfully.
++------------+------------------------------------------------------------------------------+
+| addr       | name                                                                         | 
++------------+------------------------------------------------------------------------------+
+| 5369335592 | ??_7CSI_Base@@6B@                                                            | 
+| 5369335640 | ??_7CSI_Mid@@6B@                                                             | 
+| 5369335696 | ??_7CSI_Leaf@@6B@                                                            | 
+| 5369335752 | ??_7SSPolyBase@@6B@                                                          | 
+| 5369335784 | ??_7SSPolyMid@@6B@                                                           | 
+| 5369335824 | ??_7CPlain@@6B@                                                              | 
+| 5369335960 | ??_7CMI_A@@6B@                                                               | 
+| 5369335992 | ??_7CMI_B@@6B@                                                               | 
+| 5369336024 | ??_7CMI_C@@6B@                                                               | 
+| 5369336056 | ??_7CMI_Two@@6BCMI_A@@@                                                      | 
+| 5369336096 | ??_7CMI_Two@@6BCMI_B@@@                                                      | 
+| 5369336128 | ??_7CMI_Three@@6BCMI_A@@@                                                    | 
+| 5369336160 | ??_7CMI_Three@@6BCMI_B@@@                                                    | 
+| 5369336192 | ??_7CMI_Three@@6BCMI_C@@@                                                    | 
+| 5369336224 | ??_7CPad_A@@6B@                                                              | 
+| 5369336256 | ??_7CPad_B@@6B@                                                              | 
+| 5369336288 | ??_7CMI_BigOffset@@6BCPad_A@@@                                               | 
+| 5369336320 | ??_7CMI_BigOffset@@6BCPad_B@@@                                               | 
+| 5369336352 | ??_7CVBase@@6B@                                                              | 
+| 5369336392 | ??_7CVLeft@@6B0@@                                                            | 
+| 5369336416 | ??_7CVLeft@@6BCVBase@@@                                                      | 
+| 5369336448 | ??_8CVLeft@@7B@                                                              | 
+| 5369336472 | ??_7CVRight@@6B0@@                                                           | 
+| 5369336496 | ??_7CVRight@@6BCVBase@@@                                                     | 
+| 5369336528 | ??_8CVRight@@7B@                                                             | 
+| 5369336552 | ??_7CDiamond@@6BCVLeft@@@                                                    | 
+| 5369336576 | ??_7CDiamond@@6BCVRight@@@                                                   | 
+| 5369336600 | ??_7CDiamond@@6BCVBase@@@                                                    | 
+| 5369336632 | ??_8CDiamond@@7BCVLeft@@@                                                    | 
+| 5369336644 | ??_8CDiamond@@7BCVRight@@@                                                   | 
+| 5369336664 | ??_7CMix_Plain@@6B@                                                          | 
+| 5369336696 | ??_7CMixFinal@@6B@                                                           | 
+| 5369336728 | ??_7CMixFinal@@6BCVLeft@@@                                                   | 
+| 5369336752 | ??_7CMixFinal@@6BCVRight@@@                                                  | 
+| 5369336776 | ??_7CMixFinal@@6BCVBase@@@                                                   | 
+| 5369336808 | ??_8CMixFinal@@7BCVLeft@@@                                                   | 
+| 5369336820 | ??_8CMixFinal@@7BCVRight@@@                                                  | 
+| 5369336840 | ??_7CAmb_Root@@6B@                                                           | 
+| 5369336872 | ??_7CAmb_L@@6B@                                                              | 
+| 5369336904 | ??_7CAmb_R@@6B@                                                              | 
+| 5369336936 | ??_7CAmbiguous@@6BCAmb_L@@@                                                  | 
+| 5369336968 | ??_7CAmbiguous@@6BCAmb_R@@@                                                  | 
+| 5369337000 | ??_7IInterface@@6B@                                                          | 
+| 5369337048 | ??_7CImpl@@6B@                                                               | 
+| 5369337096 | ??_7CNamespaced@inner@deep@@6B@                                              | 
+| 5369337128 | ??_7CNestedInner@CNestedOuter@inner@deep@@6B@                                | 
+| 5369337160 | ??_7?$Tmpl@H$09@@6B@                                                         | 
+| 5369337200 | ??_7?$Tmpl@N$0CA@@@6B@                                                       | 
+| 5369337240 | ??_7CD1@@6B@                                                                 | 
+| 5369337272 | ??_7CD2@@6B@                                                                 | 
+| 5369337304 | ??_7CD3@@6B@                                                                 | 
+| 5369337344 | ??_7CD4@@6B@                                                                 | 
+| 5369337392 | ??_7CD5@@6B@                                                                 | 
+| 5369337456 | ??_7CThisIsAVeryLongClassNameToTestTheNameBufferHandlingInClassInformer@@6B@ | 
+| 5369337488 | ??_7CAccess_Base@@6B@                                                        | 
+| 5369337520 | ??_7CPriv_Direct@@6B@                                                        | 
+| 5369337560 | ??_7CProt_Direct@@6B@                                                        | 
+| 5369337600 | ??_7CPriv_Leaf@@6B@                                                          | 
+| 5369338032 | ??_7type_info@@6B@                                                           | 
+| 5369338080 | ??_7exception@std@@6B@                                                       | 
+| 5369338136 | ??_7bad_cast@std@@6B@                                                        | 
+| 5369338168 | ??_7bad_typeid@std@@6B@                                                      | 
+| 5369338200 | ??_7__non_rtti_object@std@@6B@                                               | 
+| 5369344080 | ??_7DNameNode@@6B@                                                           | 
+| 5369344128 | ??_7charNode@@6B@                                                            | 
+| 5369344176 | ??_7pcharNode@@6B@                                                           | 
+| 5369344224 | ??_7pDNameNode@@6B@                                                          | 
+| 5369344272 | ??_7DNameStatusNode@@6B@                                                     | 
+| 5369344320 | ??_7pairNode@@6B@                                                            | 
+| 5369345200 | ??_7bad_exception@std@@6B@                                                   | 
++------------+------------------------------------------------------------------------------+
+70 row(s)

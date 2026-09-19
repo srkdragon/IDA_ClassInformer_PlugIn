@@ -1,0 +1,2998 @@
+{
+ "image": "D:/Sources/IDA_ClassInformer_PlugIn/RE/test/rtti_corpus_x64.exe",
+ "bits": 64,
+ "image_base": 5368709120,
+ "vftables": [
+  {
+   "col_ptr_rva": 626464,
+   "vft_rva": 626472,
+   "col_rva": 684576
+  },
+  {
+   "col_ptr_rva": 626512,
+   "vft_rva": 626520,
+   "col_rva": 684712
+  },
+  {
+   "col_ptr_rva": 626568,
+   "vft_rva": 626576,
+   "col_rva": 684856
+  },
+  {
+   "col_ptr_rva": 626624,
+   "vft_rva": 626632,
+   "col_rva": 685016
+  },
+  {
+   "col_ptr_rva": 626656,
+   "vft_rva": 626664,
+   "col_rva": 685152
+  },
+  {
+   "col_ptr_rva": 626696,
+   "vft_rva": 626704,
+   "col_rva": 685296
+  },
+  {
+   "col_ptr_rva": 626832,
+   "vft_rva": 626840,
+   "col_rva": 685432
+  },
+  {
+   "col_ptr_rva": 626864,
+   "vft_rva": 626872,
+   "col_rva": 685568
+  },
+  {
+   "col_ptr_rva": 626896,
+   "vft_rva": 626904,
+   "col_rva": 685704
+  },
+  {
+   "col_ptr_rva": 626928,
+   "vft_rva": 626936,
+   "col_rva": 685840
+  },
+  {
+   "col_ptr_rva": 626968,
+   "vft_rva": 626976,
+   "col_rva": 686048
+  },
+  {
+   "col_ptr_rva": 627000,
+   "vft_rva": 627008,
+   "col_rva": 686096
+  },
+  {
+   "col_ptr_rva": 627032,
+   "vft_rva": 627040,
+   "col_rva": 686312
+  },
+  {
+   "col_ptr_rva": 627064,
+   "vft_rva": 627072,
+   "col_rva": 686360
+  },
+  {
+   "col_ptr_rva": 627096,
+   "vft_rva": 627104,
+   "col_rva": 686408
+  },
+  {
+   "col_ptr_rva": 627128,
+   "vft_rva": 627136,
+   "col_rva": 686544
+  },
+  {
+   "col_ptr_rva": 627160,
+   "vft_rva": 627168,
+   "col_rva": 686680
+  },
+  {
+   "col_ptr_rva": 627192,
+   "vft_rva": 627200,
+   "col_rva": 686888
+  },
+  {
+   "col_ptr_rva": 627224,
+   "vft_rva": 627232,
+   "col_rva": 686936
+  },
+  {
+   "col_ptr_rva": 627264,
+   "vft_rva": 627272,
+   "col_rva": 687072
+  },
+  {
+   "col_ptr_rva": 627288,
+   "vft_rva": 627296,
+   "col_rva": 687264
+  },
+  {
+   "col_ptr_rva": 627344,
+   "vft_rva": 627352,
+   "col_rva": 687312
+  },
+  {
+   "col_ptr_rva": 627368,
+   "vft_rva": 627376,
+   "col_rva": 687456
+  },
+  {
+   "col_ptr_rva": 627424,
+   "vft_rva": 627432,
+   "col_rva": 687504
+  },
+  {
+   "col_ptr_rva": 627448,
+   "vft_rva": 627456,
+   "col_rva": 687728
+  },
+  {
+   "col_ptr_rva": 627472,
+   "vft_rva": 627480,
+   "col_rva": 687776
+  },
+  {
+   "col_ptr_rva": 627536,
+   "vft_rva": 627544,
+   "col_rva": 687824
+  },
+  {
+   "col_ptr_rva": 627568,
+   "vft_rva": 627576,
+   "col_rva": 687960
+  },
+  {
+   "col_ptr_rva": 627600,
+   "vft_rva": 627608,
+   "col_rva": 688288
+  },
+  {
+   "col_ptr_rva": 627624,
+   "vft_rva": 627632,
+   "col_rva": 688336
+  },
+  {
+   "col_ptr_rva": 627648,
+   "vft_rva": 627656,
+   "col_rva": 688384
+  },
+  {
+   "col_ptr_rva": 627712,
+   "vft_rva": 627720,
+   "col_rva": 688432
+  },
+  {
+   "col_ptr_rva": 627744,
+   "vft_rva": 627752,
+   "col_rva": 688568
+  },
+  {
+   "col_ptr_rva": 627776,
+   "vft_rva": 627784,
+   "col_rva": 688712
+  },
+  {
+   "col_ptr_rva": 627808,
+   "vft_rva": 627816,
+   "col_rva": 688856
+  },
+  {
+   "col_ptr_rva": 627840,
+   "vft_rva": 627848,
+   "col_rva": 689176
+  },
+  {
+   "col_ptr_rva": 627872,
+   "vft_rva": 627880,
+   "col_rva": 689224
+  },
+  {
+   "col_ptr_rva": 627920,
+   "vft_rva": 627928,
+   "col_rva": 689360
+  },
+  {
+   "col_ptr_rva": 627968,
+   "vft_rva": 627976,
+   "col_rva": 689504
+  },
+  {
+   "col_ptr_rva": 628000,
+   "vft_rva": 628008,
+   "col_rva": 689640
+  },
+  {
+   "col_ptr_rva": 628032,
+   "vft_rva": 628040,
+   "col_rva": 689776
+  },
+  {
+   "col_ptr_rva": 628072,
+   "vft_rva": 628080,
+   "col_rva": 689912
+  },
+  {
+   "col_ptr_rva": 628112,
+   "vft_rva": 628120,
+   "col_rva": 690048
+  },
+  {
+   "col_ptr_rva": 628144,
+   "vft_rva": 628152,
+   "col_rva": 690184
+  },
+  {
+   "col_ptr_rva": 628176,
+   "vft_rva": 628184,
+   "col_rva": 690328
+  },
+  {
+   "col_ptr_rva": 628216,
+   "vft_rva": 628224,
+   "col_rva": 690488
+  },
+  {
+   "col_ptr_rva": 628264,
+   "vft_rva": 628272,
+   "col_rva": 690656
+  },
+  {
+   "col_ptr_rva": 628328,
+   "vft_rva": 628336,
+   "col_rva": 690832
+  },
+  {
+   "col_ptr_rva": 628360,
+   "vft_rva": 628368,
+   "col_rva": 690968
+  },
+  {
+   "col_ptr_rva": 628392,
+   "vft_rva": 628400,
+   "col_rva": 691104
+  },
+  {
+   "col_ptr_rva": 628432,
+   "vft_rva": 628440,
+   "col_rva": 691296
+  },
+  {
+   "col_ptr_rva": 628472,
+   "vft_rva": 628480,
+   "col_rva": 691440
+  },
+  {
+   "col_ptr_rva": 628904,
+   "vft_rva": 628912,
+   "col_rva": 691600
+  },
+  {
+   "col_ptr_rva": 628952,
+   "vft_rva": 628960,
+   "col_rva": 691736
+  },
+  {
+   "col_ptr_rva": 629008,
+   "vft_rva": 629016,
+   "col_rva": 691872
+  },
+  {
+   "col_ptr_rva": 629040,
+   "vft_rva": 629048,
+   "col_rva": 692016
+  },
+  {
+   "col_ptr_rva": 629072,
+   "vft_rva": 629080,
+   "col_rva": 692160
+  },
+  {
+   "col_ptr_rva": 634952,
+   "vft_rva": 634960,
+   "col_rva": 692320
+  },
+  {
+   "col_ptr_rva": 635000,
+   "vft_rva": 635008,
+   "col_rva": 692456
+  },
+  {
+   "col_ptr_rva": 635048,
+   "vft_rva": 635056,
+   "col_rva": 692600
+  },
+  {
+   "col_ptr_rva": 635096,
+   "vft_rva": 635104,
+   "col_rva": 692744
+  },
+  {
+   "col_ptr_rva": 635144,
+   "vft_rva": 635152,
+   "col_rva": 692888
+  },
+  {
+   "col_ptr_rva": 635192,
+   "vft_rva": 635200,
+   "col_rva": 693032
+  },
+  {
+   "col_ptr_rva": 636072,
+   "vft_rva": 636080,
+   "col_rva": 693176
+  }
+ ],
+ "cols": {
+  "0xa7220": {
+   "rva": 684576,
+   "va": 5369393696,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738016,
+   "chd_rva": 684624,
+   "self_offset": 684576,
+   "computed_image_base_rva": 0
+  },
+  "0xa72a8": {
+   "rva": 684712,
+   "va": 5369393832,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 736840,
+   "chd_rva": 684760,
+   "self_offset": 684712,
+   "computed_image_base_rva": 0
+  },
+  "0xa7338": {
+   "rva": 684856,
+   "va": 5369393976,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 736800,
+   "chd_rva": 684904,
+   "self_offset": 684856,
+   "computed_image_base_rva": 0
+  },
+  "0xa73d8": {
+   "rva": 685016,
+   "va": 5369394136,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738688,
+   "chd_rva": 685064,
+   "self_offset": 685016,
+   "computed_image_base_rva": 0
+  },
+  "0xa7460": {
+   "rva": 685152,
+   "va": 5369394272,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 736880,
+   "chd_rva": 685200,
+   "self_offset": 685152,
+   "computed_image_base_rva": 0
+  },
+  "0xa74f0": {
+   "rva": 685296,
+   "va": 5369394416,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 736920,
+   "chd_rva": 685344,
+   "self_offset": 685296,
+   "computed_image_base_rva": 0
+  },
+  "0xa7578": {
+   "rva": 685432,
+   "va": 5369394552,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738728,
+   "chd_rva": 685480,
+   "self_offset": 685432,
+   "computed_image_base_rva": 0
+  },
+  "0xa7600": {
+   "rva": 685568,
+   "va": 5369394688,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738768,
+   "chd_rva": 685616,
+   "self_offset": 685568,
+   "computed_image_base_rva": 0
+  },
+  "0xa7688": {
+   "rva": 685704,
+   "va": 5369394824,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738808,
+   "chd_rva": 685752,
+   "self_offset": 685704,
+   "computed_image_base_rva": 0
+  },
+  "0xa7710": {
+   "rva": 685840,
+   "va": 5369394960,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 736960,
+   "chd_rva": 685888,
+   "self_offset": 685840,
+   "computed_image_base_rva": 0
+  },
+  "0xa77e0": {
+   "rva": 686048,
+   "va": 5369395168,
+   "signature": 1,
+   "offset": 8,
+   "cdOffset": 0,
+   "td_rva": 736960,
+   "chd_rva": 685888,
+   "self_offset": 686048,
+   "computed_image_base_rva": 0
+  },
+  "0xa7810": {
+   "rva": 686096,
+   "va": 5369395216,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737000,
+   "chd_rva": 686144,
+   "self_offset": 686096,
+   "computed_image_base_rva": 0
+  },
+  "0xa78e8": {
+   "rva": 686312,
+   "va": 5369395432,
+   "signature": 1,
+   "offset": 8,
+   "cdOffset": 0,
+   "td_rva": 737000,
+   "chd_rva": 686144,
+   "self_offset": 686312,
+   "computed_image_base_rva": 0
+  },
+  "0xa7918": {
+   "rva": 686360,
+   "va": 5369395480,
+   "signature": 1,
+   "offset": 16,
+   "cdOffset": 0,
+   "td_rva": 737000,
+   "chd_rva": 686144,
+   "self_offset": 686360,
+   "computed_image_base_rva": 0
+  },
+  "0xa7948": {
+   "rva": 686408,
+   "va": 5369395528,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738848,
+   "chd_rva": 686456,
+   "self_offset": 686408,
+   "computed_image_base_rva": 0
+  },
+  "0xa79d0": {
+   "rva": 686544,
+   "va": 5369395664,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738888,
+   "chd_rva": 686592,
+   "self_offset": 686544,
+   "computed_image_base_rva": 0
+  },
+  "0xa7a58": {
+   "rva": 686680,
+   "va": 5369395800,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737040,
+   "chd_rva": 686728,
+   "self_offset": 686680,
+   "computed_image_base_rva": 0
+  },
+  "0xa7b28": {
+   "rva": 686888,
+   "va": 5369396008,
+   "signature": 1,
+   "offset": 136,
+   "cdOffset": 0,
+   "td_rva": 737040,
+   "chd_rva": 686728,
+   "self_offset": 686888,
+   "computed_image_base_rva": 0
+  },
+  "0xa7b58": {
+   "rva": 686936,
+   "va": 5369396056,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738056,
+   "chd_rva": 686984,
+   "self_offset": 686936,
+   "computed_image_base_rva": 0
+  },
+  "0xa7be0": {
+   "rva": 687072,
+   "va": 5369396192,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738928,
+   "chd_rva": 687120,
+   "self_offset": 687072,
+   "computed_image_base_rva": 0
+  },
+  "0xa7ca0": {
+   "rva": 687264,
+   "va": 5369396384,
+   "signature": 1,
+   "offset": 16,
+   "cdOffset": 0,
+   "td_rva": 738928,
+   "chd_rva": 687120,
+   "self_offset": 687264,
+   "computed_image_base_rva": 0
+  },
+  "0xa7cd0": {
+   "rva": 687312,
+   "va": 5369396432,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738968,
+   "chd_rva": 687360,
+   "self_offset": 687312,
+   "computed_image_base_rva": 0
+  },
+  "0xa7d60": {
+   "rva": 687456,
+   "va": 5369396576,
+   "signature": 1,
+   "offset": 16,
+   "cdOffset": 0,
+   "td_rva": 738968,
+   "chd_rva": 687360,
+   "self_offset": 687456,
+   "computed_image_base_rva": 0
+  },
+  "0xa7d90": {
+   "rva": 687504,
+   "va": 5369396624,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737088,
+   "chd_rva": 687552,
+   "self_offset": 687504,
+   "computed_image_base_rva": 0
+  },
+  "0xa7e70": {
+   "rva": 687728,
+   "va": 5369396848,
+   "signature": 1,
+   "offset": 16,
+   "cdOffset": 0,
+   "td_rva": 737088,
+   "chd_rva": 687552,
+   "self_offset": 687728,
+   "computed_image_base_rva": 0
+  },
+  "0xa7ea0": {
+   "rva": 687776,
+   "va": 5369396896,
+   "signature": 1,
+   "offset": 32,
+   "cdOffset": 0,
+   "td_rva": 737088,
+   "chd_rva": 687552,
+   "self_offset": 687776,
+   "computed_image_base_rva": 0
+  },
+  "0xa7ed0": {
+   "rva": 687824,
+   "va": 5369396944,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739008,
+   "chd_rva": 687872,
+   "self_offset": 687824,
+   "computed_image_base_rva": 0
+  },
+  "0xa7f58": {
+   "rva": 687960,
+   "va": 5369397080,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737128,
+   "chd_rva": 688008,
+   "self_offset": 687960,
+   "computed_image_base_rva": 0
+  },
+  "0xa80a0": {
+   "rva": 688288,
+   "va": 5369397408,
+   "signature": 1,
+   "offset": 8,
+   "cdOffset": 0,
+   "td_rva": 737128,
+   "chd_rva": 688008,
+   "self_offset": 688288,
+   "computed_image_base_rva": 0
+  },
+  "0xa80d0": {
+   "rva": 688336,
+   "va": 5369397456,
+   "signature": 1,
+   "offset": 24,
+   "cdOffset": 0,
+   "td_rva": 737128,
+   "chd_rva": 688008,
+   "self_offset": 688336,
+   "computed_image_base_rva": 0
+  },
+  "0xa8100": {
+   "rva": 688384,
+   "va": 5369397504,
+   "signature": 1,
+   "offset": 40,
+   "cdOffset": 0,
+   "td_rva": 737128,
+   "chd_rva": 688008,
+   "self_offset": 688384,
+   "computed_image_base_rva": 0
+  },
+  "0xa8130": {
+   "rva": 688432,
+   "va": 5369397552,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739048,
+   "chd_rva": 688480,
+   "self_offset": 688432,
+   "computed_image_base_rva": 0
+  },
+  "0xa81b8": {
+   "rva": 688568,
+   "va": 5369397688,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739088,
+   "chd_rva": 688616,
+   "self_offset": 688568,
+   "computed_image_base_rva": 0
+  },
+  "0xa8248": {
+   "rva": 688712,
+   "va": 5369397832,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739128,
+   "chd_rva": 688760,
+   "self_offset": 688712,
+   "computed_image_base_rva": 0
+  },
+  "0xa82d8": {
+   "rva": 688856,
+   "va": 5369397976,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737168,
+   "chd_rva": 688904,
+   "self_offset": 688856,
+   "computed_image_base_rva": 0
+  },
+  "0xa8418": {
+   "rva": 689176,
+   "va": 5369398296,
+   "signature": 1,
+   "offset": 8,
+   "cdOffset": 0,
+   "td_rva": 737168,
+   "chd_rva": 688904,
+   "self_offset": 689176,
+   "computed_image_base_rva": 0
+  },
+  "0xa8448": {
+   "rva": 689224,
+   "va": 5369398344,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739168,
+   "chd_rva": 689272,
+   "self_offset": 689224,
+   "computed_image_base_rva": 0
+  },
+  "0xa84d0": {
+   "rva": 689360,
+   "va": 5369398480,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737208,
+   "chd_rva": 689408,
+   "self_offset": 689360,
+   "computed_image_base_rva": 0
+  },
+  "0xa8560": {
+   "rva": 689504,
+   "va": 5369398624,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737384,
+   "chd_rva": 689552,
+   "self_offset": 689504,
+   "computed_image_base_rva": 0
+  },
+  "0xa85e8": {
+   "rva": 689640,
+   "va": 5369398760,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737440,
+   "chd_rva": 689688,
+   "self_offset": 689640,
+   "computed_image_base_rva": 0
+  },
+  "0xa8670": {
+   "rva": 689776,
+   "va": 5369398896,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737512,
+   "chd_rva": 689824,
+   "self_offset": 689776,
+   "computed_image_base_rva": 0
+  },
+  "0xa86f8": {
+   "rva": 689912,
+   "va": 5369399032,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737552,
+   "chd_rva": 689960,
+   "self_offset": 689912,
+   "computed_image_base_rva": 0
+  },
+  "0xa8780": {
+   "rva": 690048,
+   "va": 5369399168,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739208,
+   "chd_rva": 690096,
+   "self_offset": 690048,
+   "computed_image_base_rva": 0
+  },
+  "0xa8808": {
+   "rva": 690184,
+   "va": 5369399304,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739240,
+   "chd_rva": 690232,
+   "self_offset": 690184,
+   "computed_image_base_rva": 0
+  },
+  "0xa8898": {
+   "rva": 690328,
+   "va": 5369399448,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739272,
+   "chd_rva": 690376,
+   "self_offset": 690328,
+   "computed_image_base_rva": 0
+  },
+  "0xa8938": {
+   "rva": 690488,
+   "va": 5369399608,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739304,
+   "chd_rva": 690536,
+   "self_offset": 690488,
+   "computed_image_base_rva": 0
+  },
+  "0xa89e0": {
+   "rva": 690656,
+   "va": 5369399776,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737600,
+   "chd_rva": 690704,
+   "self_offset": 690656,
+   "computed_image_base_rva": 0
+  },
+  "0xa8a90": {
+   "rva": 690832,
+   "va": 5369399952,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737632,
+   "chd_rva": 690880,
+   "self_offset": 690832,
+   "computed_image_base_rva": 0
+  },
+  "0xa8b18": {
+   "rva": 690968,
+   "va": 5369400088,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739336,
+   "chd_rva": 691016,
+   "self_offset": 690968,
+   "computed_image_base_rva": 0
+  },
+  "0xa8ba0": {
+   "rva": 691104,
+   "va": 5369400224,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737248,
+   "chd_rva": 691152,
+   "self_offset": 691104,
+   "computed_image_base_rva": 0
+  },
+  "0xa8c60": {
+   "rva": 691296,
+   "va": 5369400416,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737296,
+   "chd_rva": 691344,
+   "self_offset": 691296,
+   "computed_image_base_rva": 0
+  },
+  "0xa8cf0": {
+   "rva": 691440,
+   "va": 5369400560,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 737344,
+   "chd_rva": 691488,
+   "self_offset": 691440,
+   "computed_image_base_rva": 0
+  },
+  "0xa8d90": {
+   "rva": 691600,
+   "va": 5369400720,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739384,
+   "chd_rva": 691648,
+   "self_offset": 691600,
+   "computed_image_base_rva": 0
+  },
+  "0xa8e18": {
+   "rva": 691736,
+   "va": 5369400856,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738200,
+   "chd_rva": 691784,
+   "self_offset": 691736,
+   "computed_image_base_rva": 0
+  },
+  "0xa8ea0": {
+   "rva": 691872,
+   "va": 5369400992,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738248,
+   "chd_rva": 691920,
+   "self_offset": 691872,
+   "computed_image_base_rva": 0
+  },
+  "0xa8f30": {
+   "rva": 692016,
+   "va": 5369401136,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738152,
+   "chd_rva": 692064,
+   "self_offset": 692016,
+   "computed_image_base_rva": 0
+  },
+  "0xa8fc0": {
+   "rva": 692160,
+   "va": 5369401280,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738096,
+   "chd_rva": 692208,
+   "self_offset": 692160,
+   "computed_image_base_rva": 0
+  },
+  "0xa9060": {
+   "rva": 692320,
+   "va": 5369401440,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739424,
+   "chd_rva": 692368,
+   "self_offset": 692320,
+   "computed_image_base_rva": 0
+  },
+  "0xa90e8": {
+   "rva": 692456,
+   "va": 5369401576,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739464,
+   "chd_rva": 692504,
+   "self_offset": 692456,
+   "computed_image_base_rva": 0
+  },
+  "0xa9178": {
+   "rva": 692600,
+   "va": 5369401720,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739504,
+   "chd_rva": 692648,
+   "self_offset": 692600,
+   "computed_image_base_rva": 0
+  },
+  "0xa9208": {
+   "rva": 692744,
+   "va": 5369401864,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739544,
+   "chd_rva": 692792,
+   "self_offset": 692744,
+   "computed_image_base_rva": 0
+  },
+  "0xa9298": {
+   "rva": 692888,
+   "va": 5369402008,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739584,
+   "chd_rva": 692936,
+   "self_offset": 692888,
+   "computed_image_base_rva": 0
+  },
+  "0xa9328": {
+   "rva": 693032,
+   "va": 5369402152,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 739632,
+   "chd_rva": 693080,
+   "self_offset": 693032,
+   "computed_image_base_rva": 0
+  },
+  "0xa93b8": {
+   "rva": 693176,
+   "va": 5369402296,
+   "signature": 1,
+   "offset": 0,
+   "cdOffset": 0,
+   "td_rva": 738344,
+   "chd_rva": 693224,
+   "self_offset": 693176,
+   "computed_image_base_rva": 0
+  }
+ },
+ "chds": {
+  "0xa7250": {
+   "rva": 684624,
+   "va": 5369393744,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 684648
+  },
+  "0xa72d8": {
+   "rva": 684760,
+   "va": 5369393880,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 684784
+  },
+  "0xa7368": {
+   "rva": 684904,
+   "va": 5369394024,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 3,
+   "bca_rva": 684928
+  },
+  "0xa7408": {
+   "rva": 685064,
+   "va": 5369394184,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 685088
+  },
+  "0xa7490": {
+   "rva": 685200,
+   "va": 5369394320,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 685224
+  },
+  "0xa7520": {
+   "rva": 685344,
+   "va": 5369394464,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 685368
+  },
+  "0xa75a8": {
+   "rva": 685480,
+   "va": 5369394600,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 685504
+  },
+  "0xa7630": {
+   "rva": 685616,
+   "va": 5369394736,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 685640
+  },
+  "0xa76b8": {
+   "rva": 685752,
+   "va": 5369394872,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 685776
+  },
+  "0xa7740": {
+   "rva": 685888,
+   "va": 5369395008,
+   "signature": 0,
+   "attributes": 1,
+   "attr_names": [
+    "CHD_MULTINH"
+   ],
+   "numBaseClasses": 3,
+   "bca_rva": 685912
+  },
+  "0xa7840": {
+   "rva": 686144,
+   "va": 5369395264,
+   "signature": 0,
+   "attributes": 1,
+   "attr_names": [
+    "CHD_MULTINH"
+   ],
+   "numBaseClasses": 4,
+   "bca_rva": 686168
+  },
+  "0xa7978": {
+   "rva": 686456,
+   "va": 5369395576,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 686480
+  },
+  "0xa7a00": {
+   "rva": 686592,
+   "va": 5369395712,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 686616
+  },
+  "0xa7a88": {
+   "rva": 686728,
+   "va": 5369395848,
+   "signature": 0,
+   "attributes": 1,
+   "attr_names": [
+    "CHD_MULTINH"
+   ],
+   "numBaseClasses": 3,
+   "bca_rva": 686752
+  },
+  "0xa7b88": {
+   "rva": 686984,
+   "va": 5369396104,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 687008
+  },
+  "0xa7c10": {
+   "rva": 687120,
+   "va": 5369396240,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 687144
+  },
+  "0xa7d00": {
+   "rva": 687360,
+   "va": 5369396480,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 687384
+  },
+  "0xa7dc0": {
+   "rva": 687552,
+   "va": 5369396672,
+   "signature": 0,
+   "attributes": 3,
+   "attr_names": [
+    "CHD_MULTINH",
+    "CHD_VIRTINH"
+   ],
+   "numBaseClasses": 5,
+   "bca_rva": 687576
+  },
+  "0xa7f00": {
+   "rva": 687872,
+   "va": 5369396992,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 687896
+  },
+  "0xa7f88": {
+   "rva": 688008,
+   "va": 5369397128,
+   "signature": 0,
+   "attributes": 3,
+   "attr_names": [
+    "CHD_MULTINH",
+    "CHD_VIRTINH"
+   ],
+   "numBaseClasses": 6,
+   "bca_rva": 688032
+  },
+  "0xa8160": {
+   "rva": 688480,
+   "va": 5369397600,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 688504
+  },
+  "0xa81e8": {
+   "rva": 688616,
+   "va": 5369397736,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 688640
+  },
+  "0xa8278": {
+   "rva": 688760,
+   "va": 5369397880,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 688784
+  },
+  "0xa8308": {
+   "rva": 688904,
+   "va": 5369398024,
+   "signature": 0,
+   "attributes": 5,
+   "attr_names": [
+    "CHD_MULTINH",
+    "CHD_AMBIGUOUS"
+   ],
+   "numBaseClasses": 5,
+   "bca_rva": 688928
+  },
+  "0xa8478": {
+   "rva": 689272,
+   "va": 5369398392,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 689296
+  },
+  "0xa8500": {
+   "rva": 689408,
+   "va": 5369398528,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 689432
+  },
+  "0xa8590": {
+   "rva": 689552,
+   "va": 5369398672,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 689576
+  },
+  "0xa8618": {
+   "rva": 689688,
+   "va": 5369398808,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 689712
+  },
+  "0xa86a0": {
+   "rva": 689824,
+   "va": 5369398944,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 689848
+  },
+  "0xa8728": {
+   "rva": 689960,
+   "va": 5369399080,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 689984
+  },
+  "0xa87b0": {
+   "rva": 690096,
+   "va": 5369399216,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 690120
+  },
+  "0xa8838": {
+   "rva": 690232,
+   "va": 5369399352,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 690256
+  },
+  "0xa88c8": {
+   "rva": 690376,
+   "va": 5369399496,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 3,
+   "bca_rva": 690400
+  },
+  "0xa8968": {
+   "rva": 690536,
+   "va": 5369399656,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 4,
+   "bca_rva": 690560
+  },
+  "0xa8a10": {
+   "rva": 690704,
+   "va": 5369399824,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 5,
+   "bca_rva": 690728
+  },
+  "0xa8ac0": {
+   "rva": 690880,
+   "va": 5369400000,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 690904
+  },
+  "0xa8b48": {
+   "rva": 691016,
+   "va": 5369400136,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 691040
+  },
+  "0xa8bd0": {
+   "rva": 691152,
+   "va": 5369400272,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 691176
+  },
+  "0xa8c90": {
+   "rva": 691344,
+   "va": 5369400464,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 691368
+  },
+  "0xa8d20": {
+   "rva": 691488,
+   "va": 5369400608,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 3,
+   "bca_rva": 691512
+  },
+  "0xa8dc0": {
+   "rva": 691648,
+   "va": 5369400768,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 691672
+  },
+  "0xa8e48": {
+   "rva": 691784,
+   "va": 5369400904,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 691808
+  },
+  "0xa8ed0": {
+   "rva": 691920,
+   "va": 5369401040,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 691944
+  },
+  "0xa8f60": {
+   "rva": 692064,
+   "va": 5369401184,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 692088
+  },
+  "0xa8ff0": {
+   "rva": 692208,
+   "va": 5369401328,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 3,
+   "bca_rva": 692232
+  },
+  "0xa9090": {
+   "rva": 692368,
+   "va": 5369401488,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 1,
+   "bca_rva": 692392
+  },
+  "0xa9118": {
+   "rva": 692504,
+   "va": 5369401624,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 692528
+  },
+  "0xa91a8": {
+   "rva": 692648,
+   "va": 5369401768,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 692672
+  },
+  "0xa9238": {
+   "rva": 692792,
+   "va": 5369401912,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 692816
+  },
+  "0xa92c8": {
+   "rva": 692936,
+   "va": 5369402056,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 692960
+  },
+  "0xa9358": {
+   "rva": 693080,
+   "va": 5369402200,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 693104
+  },
+  "0xa93e8": {
+   "rva": 693224,
+   "va": 5369402344,
+   "signature": 0,
+   "attributes": 0,
+   "attr_names": [],
+   "numBaseClasses": 2,
+   "bca_rva": 693248
+  }
+ },
+ "bcds": {
+  "0xa7278": {
+   "rva": 684664,
+   "va": 5369393784,
+   "td_rva": 738016,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 684624
+  },
+  "0xa7308": {
+   "rva": 684808,
+   "va": 5369393928,
+   "td_rva": 736840,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 684760
+  },
+  "0xa73a8": {
+   "rva": 684968,
+   "va": 5369394088,
+   "td_rva": 736800,
+   "numContainedBases": 2,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 684904
+  },
+  "0xa7430": {
+   "rva": 685104,
+   "va": 5369394224,
+   "td_rva": 738688,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685064
+  },
+  "0xa74c0": {
+   "rva": 685248,
+   "va": 5369394368,
+   "td_rva": 736880,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685200
+  },
+  "0xa7548": {
+   "rva": 685384,
+   "va": 5369394504,
+   "td_rva": 736920,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685344
+  },
+  "0xa75d0": {
+   "rva": 685520,
+   "va": 5369394640,
+   "td_rva": 738728,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685480
+  },
+  "0xa7658": {
+   "rva": 685656,
+   "va": 5369394776,
+   "td_rva": 738768,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685616
+  },
+  "0xa76e0": {
+   "rva": 685792,
+   "va": 5369394912,
+   "td_rva": 738808,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685752
+  },
+  "0xa7780": {
+   "rva": 685952,
+   "va": 5369395072,
+   "td_rva": 736960,
+   "numContainedBases": 2,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685888
+  },
+  "0xa77b0": {
+   "rva": 686000,
+   "va": 5369395120,
+   "td_rva": 738768,
+   "numContainedBases": 0,
+   "mdisp": 8,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685616
+  },
+  "0xa7888": {
+   "rva": 686216,
+   "va": 5369395336,
+   "td_rva": 737000,
+   "numContainedBases": 3,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686144
+  },
+  "0xa78b8": {
+   "rva": 686264,
+   "va": 5369395384,
+   "td_rva": 738808,
+   "numContainedBases": 0,
+   "mdisp": 16,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 685752
+  },
+  "0xa79a0": {
+   "rva": 686496,
+   "va": 5369395616,
+   "td_rva": 738848,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686456
+  },
+  "0xa7a28": {
+   "rva": 686632,
+   "va": 5369395752,
+   "td_rva": 738888,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686592
+  },
+  "0xa7ac8": {
+   "rva": 686792,
+   "va": 5369395912,
+   "td_rva": 737040,
+   "numContainedBases": 2,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686728
+  },
+  "0xa7af8": {
+   "rva": 686840,
+   "va": 5369395960,
+   "td_rva": 738888,
+   "numContainedBases": 0,
+   "mdisp": 136,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686592
+  },
+  "0xa7bb0": {
+   "rva": 687024,
+   "va": 5369396144,
+   "td_rva": 738056,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686984
+  },
+  "0xa7c40": {
+   "rva": 687168,
+   "va": 5369396288,
+   "td_rva": 738928,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687120
+  },
+  "0xa7c70": {
+   "rva": 687216,
+   "va": 5369396336,
+   "td_rva": 738056,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": 8,
+   "vdisp": 4,
+   "attributes": 80,
+   "attr_names": [
+    "BCD_VBOFCONTOBJ",
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686984
+  },
+  "0xa7d30": {
+   "rva": 687408,
+   "va": 5369396528,
+   "td_rva": 738968,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687360
+  },
+  "0xa7e10": {
+   "rva": 687632,
+   "va": 5369396752,
+   "td_rva": 737088,
+   "numContainedBases": 4,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687552
+  },
+  "0xa7e40": {
+   "rva": 687680,
+   "va": 5369396800,
+   "td_rva": 738968,
+   "numContainedBases": 1,
+   "mdisp": 16,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687360
+  },
+  "0xa7f28": {
+   "rva": 687912,
+   "va": 5369397032,
+   "td_rva": 739008,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687872
+  },
+  "0xa7fe0": {
+   "rva": 688096,
+   "va": 5369397216,
+   "td_rva": 737128,
+   "numContainedBases": 5,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688008
+  },
+  "0xa8010": {
+   "rva": 688144,
+   "va": 5369397264,
+   "td_rva": 738928,
+   "numContainedBases": 1,
+   "mdisp": 8,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687120
+  },
+  "0xa8040": {
+   "rva": 688192,
+   "va": 5369397312,
+   "td_rva": 738056,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": 16,
+   "vdisp": 4,
+   "attributes": 80,
+   "attr_names": [
+    "BCD_VBOFCONTOBJ",
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 686984
+  },
+  "0xa8070": {
+   "rva": 688240,
+   "va": 5369397360,
+   "td_rva": 738968,
+   "numContainedBases": 1,
+   "mdisp": 24,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 687360
+  },
+  "0xa8188": {
+   "rva": 688520,
+   "va": 5369397640,
+   "td_rva": 739048,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688480
+  },
+  "0xa8218": {
+   "rva": 688664,
+   "va": 5369397784,
+   "td_rva": 739088,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688616
+  },
+  "0xa82a8": {
+   "rva": 688808,
+   "va": 5369397928,
+   "td_rva": 739128,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688760
+  },
+  "0xa8358": {
+   "rva": 688984,
+   "va": 5369398104,
+   "td_rva": 737168,
+   "numContainedBases": 4,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688904
+  },
+  "0xa8388": {
+   "rva": 689032,
+   "va": 5369398152,
+   "td_rva": 739048,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 66,
+   "attr_names": [
+    "BCD_AMBIGUOUS",
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688480
+  },
+  "0xa83b8": {
+   "rva": 689080,
+   "va": 5369398200,
+   "td_rva": 739128,
+   "numContainedBases": 1,
+   "mdisp": 8,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688760
+  },
+  "0xa83e8": {
+   "rva": 689128,
+   "va": 5369398248,
+   "td_rva": 739048,
+   "numContainedBases": 0,
+   "mdisp": 8,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 66,
+   "attr_names": [
+    "BCD_AMBIGUOUS",
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 688480
+  },
+  "0xa84a0": {
+   "rva": 689312,
+   "va": 5369398432,
+   "td_rva": 739168,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 689272
+  },
+  "0xa8530": {
+   "rva": 689456,
+   "va": 5369398576,
+   "td_rva": 737208,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 689408
+  },
+  "0xa85b8": {
+   "rva": 689592,
+   "va": 5369398712,
+   "td_rva": 737384,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 689552
+  },
+  "0xa8640": {
+   "rva": 689728,
+   "va": 5369398848,
+   "td_rva": 737440,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 689688
+  },
+  "0xa86c8": {
+   "rva": 689864,
+   "va": 5369398984,
+   "td_rva": 737512,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 689824
+  },
+  "0xa8750": {
+   "rva": 690000,
+   "va": 5369399120,
+   "td_rva": 737552,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 689960
+  },
+  "0xa87d8": {
+   "rva": 690136,
+   "va": 5369399256,
+   "td_rva": 739208,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 690096
+  },
+  "0xa8868": {
+   "rva": 690280,
+   "va": 5369399400,
+   "td_rva": 739240,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 690232
+  },
+  "0xa8908": {
+   "rva": 690440,
+   "va": 5369399560,
+   "td_rva": 739272,
+   "numContainedBases": 2,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 690376
+  },
+  "0xa89b0": {
+   "rva": 690608,
+   "va": 5369399728,
+   "td_rva": 739304,
+   "numContainedBases": 3,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 690536
+  },
+  "0xa8a60": {
+   "rva": 690784,
+   "va": 5369399904,
+   "td_rva": 737600,
+   "numContainedBases": 4,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 690704
+  },
+  "0xa8ae8": {
+   "rva": 690920,
+   "va": 5369400040,
+   "td_rva": 737632,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 690880
+  },
+  "0xa8b70": {
+   "rva": 691056,
+   "va": 5369400176,
+   "td_rva": 739336,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691016
+  },
+  "0xa8c00": {
+   "rva": 691200,
+   "va": 5369400320,
+   "td_rva": 737248,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691152
+  },
+  "0xa8c30": {
+   "rva": 691248,
+   "va": 5369400368,
+   "td_rva": 739336,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 77,
+   "attr_names": [
+    "BCD_NOTVISIBLE",
+    "BCD_PRIVORPROTINCOMPOBJ",
+    "BCD_PRIVORPROTBASE",
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691016
+  },
+  "0xa8cc0": {
+   "rva": 691392,
+   "va": 5369400512,
+   "td_rva": 737296,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691344
+  },
+  "0xa8d60": {
+   "rva": 691552,
+   "va": 5369400672,
+   "td_rva": 737344,
+   "numContainedBases": 2,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691488
+  },
+  "0xa8de8": {
+   "rva": 691688,
+   "va": 5369400808,
+   "td_rva": 739384,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691648
+  },
+  "0xa8e70": {
+   "rva": 691824,
+   "va": 5369400944,
+   "td_rva": 738200,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691784
+  },
+  "0xa8f00": {
+   "rva": 691968,
+   "va": 5369401088,
+   "td_rva": 738248,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 691920
+  },
+  "0xa8f90": {
+   "rva": 692112,
+   "va": 5369401232,
+   "td_rva": 738152,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692064
+  },
+  "0xa9030": {
+   "rva": 692272,
+   "va": 5369401392,
+   "td_rva": 738096,
+   "numContainedBases": 2,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692208
+  },
+  "0xa90b8": {
+   "rva": 692408,
+   "va": 5369401528,
+   "td_rva": 739424,
+   "numContainedBases": 0,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692368
+  },
+  "0xa9148": {
+   "rva": 692552,
+   "va": 5369401672,
+   "td_rva": 739464,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692504
+  },
+  "0xa91d8": {
+   "rva": 692696,
+   "va": 5369401816,
+   "td_rva": 739504,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692648
+  },
+  "0xa9268": {
+   "rva": 692840,
+   "va": 5369401960,
+   "td_rva": 739544,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692792
+  },
+  "0xa92f8": {
+   "rva": 692984,
+   "va": 5369402104,
+   "td_rva": 739584,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 692936
+  },
+  "0xa9388": {
+   "rva": 693128,
+   "va": 5369402248,
+   "td_rva": 739632,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 693080
+  },
+  "0xa9418": {
+   "rva": 693272,
+   "va": 5369402392,
+   "td_rva": 738344,
+   "numContainedBases": 1,
+   "mdisp": 0,
+   "pdisp": -1,
+   "vdisp": 0,
+   "attributes": 64,
+   "attr_names": [
+    "BCD_HASPCHD"
+   ],
+   "chd_rva_if_haspchd": 693224
+  }
+ },
+ "tds": {
+  "0xb42e0": {
+   "rva": 738016,
+   "va": 5369447136,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCSI_Base@@",
+   "kind": "class",
+   "name_len": 15,
+   "alloc_align_guess": 16
+  },
+  "0xb3e48": {
+   "rva": 736840,
+   "va": 5369445960,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCSI_Mid@@",
+   "kind": "class",
+   "name_len": 14,
+   "alloc_align_guess": 16
+  },
+  "0xb3e20": {
+   "rva": 736800,
+   "va": 5369445920,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCSI_Leaf@@",
+   "kind": "class",
+   "name_len": 15,
+   "alloc_align_guess": 16
+  },
+  "0xb4580": {
+   "rva": 738688,
+   "va": 5369447808,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AUSSPolyBase@@",
+   "kind": "struct",
+   "name_len": 17,
+   "alloc_align_guess": 16
+  },
+  "0xb3e70": {
+   "rva": 736880,
+   "va": 5369446000,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AUSSPolyMid@@",
+   "kind": "struct",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb3e98": {
+   "rva": 736920,
+   "va": 5369446040,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCPlain@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb45a8": {
+   "rva": 738728,
+   "va": 5369447848,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMI_A@@",
+   "kind": "class",
+   "name_len": 12,
+   "alloc_align_guess": 16
+  },
+  "0xb45d0": {
+   "rva": 738768,
+   "va": 5369447888,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMI_B@@",
+   "kind": "class",
+   "name_len": 12,
+   "alloc_align_guess": 16
+  },
+  "0xb45f8": {
+   "rva": 738808,
+   "va": 5369447928,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMI_C@@",
+   "kind": "class",
+   "name_len": 12,
+   "alloc_align_guess": 16
+  },
+  "0xb3ec0": {
+   "rva": 736960,
+   "va": 5369446080,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMI_Two@@",
+   "kind": "class",
+   "name_len": 14,
+   "alloc_align_guess": 16
+  },
+  "0xb3ee8": {
+   "rva": 737000,
+   "va": 5369446120,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMI_Three@@",
+   "kind": "class",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb4620": {
+   "rva": 738848,
+   "va": 5369447968,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCPad_A@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb4648": {
+   "rva": 738888,
+   "va": 5369448008,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCPad_B@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb3f10": {
+   "rva": 737040,
+   "va": 5369446160,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMI_BigOffset@@",
+   "kind": "class",
+   "name_len": 20,
+   "alloc_align_guess": 16
+  },
+  "0xb4308": {
+   "rva": 738056,
+   "va": 5369447176,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCVBase@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb4670": {
+   "rva": 738928,
+   "va": 5369448048,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCVLeft@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb4698": {
+   "rva": 738968,
+   "va": 5369448088,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCVRight@@",
+   "kind": "class",
+   "name_len": 14,
+   "alloc_align_guess": 16
+  },
+  "0xb3f40": {
+   "rva": 737088,
+   "va": 5369446208,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCDiamond@@",
+   "kind": "class",
+   "name_len": 15,
+   "alloc_align_guess": 16
+  },
+  "0xb46c0": {
+   "rva": 739008,
+   "va": 5369448128,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMix_Plain@@",
+   "kind": "class",
+   "name_len": 17,
+   "alloc_align_guess": 16
+  },
+  "0xb3f68": {
+   "rva": 737128,
+   "va": 5369446248,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCMixFinal@@",
+   "kind": "class",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb46e8": {
+   "rva": 739048,
+   "va": 5369448168,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCAmb_Root@@",
+   "kind": "class",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb4710": {
+   "rva": 739088,
+   "va": 5369448208,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCAmb_L@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb4738": {
+   "rva": 739128,
+   "va": 5369448248,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCAmb_R@@",
+   "kind": "class",
+   "name_len": 13,
+   "alloc_align_guess": 16
+  },
+  "0xb3f90": {
+   "rva": 737168,
+   "va": 5369446288,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCAmbiguous@@",
+   "kind": "class",
+   "name_len": 17,
+   "alloc_align_guess": 16
+  },
+  "0xb4760": {
+   "rva": 739168,
+   "va": 5369448288,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVIInterface@@",
+   "kind": "class",
+   "name_len": 17,
+   "alloc_align_guess": 16
+  },
+  "0xb3fb8": {
+   "rva": 737208,
+   "va": 5369446328,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCImpl@@",
+   "kind": "class",
+   "name_len": 12,
+   "alloc_align_guess": 16
+  },
+  "0xb4068": {
+   "rva": 737384,
+   "va": 5369446504,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCNamespaced@inner@deep@@",
+   "kind": "class",
+   "name_len": 29,
+   "alloc_align_guess": 16
+  },
+  "0xb40a0": {
+   "rva": 737440,
+   "va": 5369446560,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCNestedInner@CNestedOuter@inner@deep@@",
+   "kind": "class",
+   "name_len": 43,
+   "alloc_align_guess": 16
+  },
+  "0xb40e8": {
+   "rva": 737512,
+   "va": 5369446632,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AV?$Tmpl@H$09@@",
+   "kind": "class",
+   "name_len": 18,
+   "alloc_align_guess": 16
+  },
+  "0xb4110": {
+   "rva": 737552,
+   "va": 5369446672,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AV?$Tmpl@N$0CA@@@",
+   "kind": "class",
+   "name_len": 20,
+   "alloc_align_guess": 16
+  },
+  "0xb4788": {
+   "rva": 739208,
+   "va": 5369448328,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCD1@@",
+   "kind": "class",
+   "name_len": 10,
+   "alloc_align_guess": 16
+  },
+  "0xb47a8": {
+   "rva": 739240,
+   "va": 5369448360,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCD2@@",
+   "kind": "class",
+   "name_len": 10,
+   "alloc_align_guess": 16
+  },
+  "0xb47c8": {
+   "rva": 739272,
+   "va": 5369448392,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCD3@@",
+   "kind": "class",
+   "name_len": 10,
+   "alloc_align_guess": 16
+  },
+  "0xb47e8": {
+   "rva": 739304,
+   "va": 5369448424,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCD4@@",
+   "kind": "class",
+   "name_len": 10,
+   "alloc_align_guess": 16
+  },
+  "0xb4140": {
+   "rva": 737600,
+   "va": 5369446720,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCD5@@",
+   "kind": "class",
+   "name_len": 10,
+   "alloc_align_guess": 16
+  },
+  "0xb4160": {
+   "rva": 737632,
+   "va": 5369446752,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCThisIsAVeryLongClassNameToTestTheNameBufferHandlingInClassInformer@@",
+   "kind": "class",
+   "name_len": 74,
+   "alloc_align_guess": 16
+  },
+  "0xb4808": {
+   "rva": 739336,
+   "va": 5369448456,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCAccess_Base@@",
+   "kind": "class",
+   "name_len": 19,
+   "alloc_align_guess": 16
+  },
+  "0xb3fe0": {
+   "rva": 737248,
+   "va": 5369446368,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCPriv_Direct@@",
+   "kind": "class",
+   "name_len": 19,
+   "alloc_align_guess": 16
+  },
+  "0xb4010": {
+   "rva": 737296,
+   "va": 5369446416,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCProt_Direct@@",
+   "kind": "class",
+   "name_len": 19,
+   "alloc_align_guess": 16
+  },
+  "0xb4040": {
+   "rva": 737344,
+   "va": 5369446464,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVCPriv_Leaf@@",
+   "kind": "class",
+   "name_len": 17,
+   "alloc_align_guess": 16
+  },
+  "0xb4838": {
+   "rva": 739384,
+   "va": 5369448504,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVtype_info@@",
+   "kind": "class",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb4398": {
+   "rva": 738200,
+   "va": 5369447320,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVexception@std@@",
+   "kind": "class",
+   "name_len": 20,
+   "alloc_align_guess": 16
+  },
+  "0xb43c8": {
+   "rva": 738248,
+   "va": 5369447368,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVbad_cast@std@@",
+   "kind": "class",
+   "name_len": 19,
+   "alloc_align_guess": 16
+  },
+  "0xb4368": {
+   "rva": 738152,
+   "va": 5369447272,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVbad_typeid@std@@",
+   "kind": "class",
+   "name_len": 21,
+   "alloc_align_guess": 16
+  },
+  "0xb4330": {
+   "rva": 738096,
+   "va": 5369447216,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AV__non_rtti_object@std@@",
+   "kind": "class",
+   "name_len": 28,
+   "alloc_align_guess": 16
+  },
+  "0xb4860": {
+   "rva": 739424,
+   "va": 5369448544,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVDNameNode@@",
+   "kind": "class",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb4888": {
+   "rva": 739464,
+   "va": 5369448584,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVcharNode@@",
+   "kind": "class",
+   "name_len": 15,
+   "alloc_align_guess": 16
+  },
+  "0xb48b0": {
+   "rva": 739504,
+   "va": 5369448624,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVpcharNode@@",
+   "kind": "class",
+   "name_len": 16,
+   "alloc_align_guess": 16
+  },
+  "0xb48d8": {
+   "rva": 739544,
+   "va": 5369448664,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVpDNameNode@@",
+   "kind": "class",
+   "name_len": 17,
+   "alloc_align_guess": 16
+  },
+  "0xb4900": {
+   "rva": 739584,
+   "va": 5369448704,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVDNameStatusNode@@",
+   "kind": "class",
+   "name_len": 22,
+   "alloc_align_guess": 16
+  },
+  "0xb4930": {
+   "rva": 739632,
+   "va": 5369448752,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVpairNode@@",
+   "kind": "class",
+   "name_len": 15,
+   "alloc_align_guess": 16
+  },
+  "0xb4428": {
+   "rva": 738344,
+   "va": 5369447464,
+   "vfptr": 5369338032,
+   "vfptr_rva": 628912,
+   "spare": 0,
+   "raw_name": ".?AVbad_exception@std@@",
+   "kind": "class",
+   "name_len": 24,
+   "alloc_align_guess": 16
+  }
+ },
+ "anomalies": []
+}

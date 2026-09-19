@@ -1,0 +1,9 @@
+# Regenerable build/analysis artifacts (keep sources, maps, docs, JSON evidence)
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.i64
+*.idb
+RE_dumpbin_*.txt
+__pycache__/

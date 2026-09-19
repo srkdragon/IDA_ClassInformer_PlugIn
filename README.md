@@ -128,6 +128,16 @@ You'll need Visual Studio 2022 with the *Desktop development with C++* workload,
 
 ------
 
+#### Reverse Engineering Notes
+
+The [RE/](RE/) folder contains an evidence-based reverse engineering pass over the
+MSVC RTTI format as emitted by Visual Studio 2026 (x86 & x64), including a test
+corpus, a dependency-free PE/RTTI scanner, and verified documentation of every
+structure the plugin parses — plus the bugs it uncovered and their fixes
+([RE/README.md](RE/README.md)).
+
+------
+
 #### Design
 
 Class Informer builds on Igor Skochinsky’s RTTI research, transitioning from IDC scripts to a plug-in for speed and flexibility. Key improvements:
