@@ -107,6 +107,27 @@ Class names are labeled as “class” by default unless prefixed with “struct
 
 ------
 
+#### Building
+
+###### GitHub Actions (CI)
+
+The repo ships a workflow at [`.github/workflows/build-windows.yml`](.github/workflows/build-windows.yml) that builds the Release|x64 plugin for **IDA Pro 9.4** on every push/PR, and on manual dispatch (`Actions` tab → `Run workflow`). The resulting `IDA_ClassInformer.dll` (plus `.pdb`) is uploaded as a build artifact.
+
+It reproduces the local build with these dependencies, pulled automatically:
+
+- **IDA SDK 9.4** — open source at [HexRaysSA/ida-sdk](https://github.com/HexRaysSA/ida-sdk) (tag `v9.4.0-sdk.1`).
+- **Qt 6.8.2** (`win64_msvc2022_64`) — the Qt version IDA 9.4 ships; only `qtbase` is needed for headers and the moc/uic/rcc tools. Linking goes through the Qt import stubs bundled with the SDK (`lib/x64_win_qt`).
+- **Qt/MSBuild** integration (`qt-vsaddin-msbuild` zip from [download.qt.io](https://download.qt.io/official_releases/vsaddin/)) — provides the QtMoc/QtUic/QtRcc MSBuild targets the project uses.
+- **[IDA_Support](https://github.com/kweatherman/IDA_Support)** — WaitBoxEx, SegSelect, OggPlayer static libs and Utility sources, cloned next to the repo as the project expects.
+
+Note: the workflow comments out `MAXSPECSIZE` in the SDK's `netnode.hpp`, since the plugin defines it itself in `Main.cpp` (the author's local SDK copy has the same line commented out).
+
+###### Building locally
+
+You'll need Visual Studio 2022 with the *Desktop development with C++* workload, the Qt Visual Studio Tools extension (with a Qt 6.8.x `msvc2022_64` version registered), the IDA 9.4 SDK, and the [IDA_Support](https://github.com/kweatherman/IDA_Support) repo next to this one. Set the `_IDADIR` environment variable to a folder containing the SDK under `idasdk\` (so that `%_IDADIR%\idasdk\src\include` resolves), and `IDASUPPORT` to the IDA_Support checkout, then build the `Release|x64` configuration of `IDA_ClassInformer.sln`.
+
+------
+
 #### Design
 
 Class Informer builds on Igor Skochinsky’s RTTI research, transitioning from IDC scripts to a plug-in for speed and flexibility. Key improvements:

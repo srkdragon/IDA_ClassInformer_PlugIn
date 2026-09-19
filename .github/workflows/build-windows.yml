@@ -1,0 +1,132 @@
+# Build Class Informer for IDA Professional 9.4 (Windows x64)
+#
+# Reproduces the author's local build on CI:
+#   - Visual Studio 2022 (v143 toolset), MSBuild Release|x64
+#   - IDA SDK from the open-source HexRaysSA/ida-sdk repo (tag matching IDA 9.4)
+#   - Qt 6.8.2 msvc2022_64 (the exact Qt IDA 9.4 ships - check Qt6Core.dll in
+#     the IDA folder); only qtbase is needed: headers + moc/uic/rcc/qmake.
+#     Linking uses the Qt import stubs bundled with the SDK (src/lib/x64_win_qt).
+#   - Qt/MSBuild integration (the command-line "qt-vsaddin-msbuild" zip), which
+#     provides the QtMoc/QtRcc/QtUic targets the .vcxproj imports via $(QtMsBuild)
+#   - Sirmabus' IDA_Support repo (WaitBoxEx, SegSelect, OggPlayer static libs +
+#     Utility sources) cloned next to the repo, as the project expects
+#
+# Note: the SDK's netnode.hpp gets one line patched below (MAXSPECSIZE); the
+# author's own SDK copy has the same line commented out (see Main.cpp ~line 19).
+
+name: Build (IDA Pro 9.4, Windows x64)
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # IDA SDK snapshot matching IDA Pro 9.4 (e.g. build 9.4.260714)
+  IDA_SDK_TAG: v9.4.0-sdk.1
+  IDA_SDK_REPO: HexRaysSA/ida-sdk
+  # Qt version bundled with IDA 9.4 (IDA's Qt6Core.dll is 6.8.2)
+  QT_VERSION: "6.8.2"
+  QT_ARCH: win64_msvc2022_64
+  # Qt/MSBuild integration (command-line build of Qt Visual Studio Tools)
+  QT_VSADDIN_VERSION: "3.5.0"
+  # Author's support libraries
+  IDA_SUPPORT_REPO: kweatherman/IDA_Support
+
+jobs:
+  build:
+    name: MSBuild Release|x64
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Install Qt ${{ env.QT_VERSION }} (${{ env.QT_ARCH }}) via aqtinstall
+        shell: pwsh
+        run: |
+          pip install aqtinstall
+          python -m aqt install-qt windows desktop $env:QT_VERSION $env:QT_ARCH `
+            -O "$env:GITHUB_WORKSPACE\deps\Qt" --archives qtbase
+          # qmake/moc/uic/rcc live in the qtbase bin dir
+          Get-ChildItem "$env:GITHUB_WORKSPACE\deps\Qt\$env:QT_VERSION\msvc2022_64\bin" -Include moc.exe,uic.exe,rcc.exe,qmake.exe -Recurse
+
+      - name: Get IDA SDK (${{ env.IDA_SDK_TAG }})
+        shell: pwsh
+        run: |
+          git clone --depth 1 --branch $env:IDA_SDK_TAG `
+            "https://github.com/$env:IDA_SDK_REPO.git" "$env:GITHUB_WORKSPACE\deps\idasdk"
+
+      - name: Patch SDK netnode.hpp (MAXSPECSIZE is defined in plugin Main.cpp)
+        shell: pwsh
+        run: |
+          $f = "$env:GITHUB_WORKSPACE\deps\idasdk\src\include\netnode.hpp"
+          $c = Get-Content $f -Raw
+          $c = $c.Replace("const int MAXSPECSIZE = 1024;",
+            "//const int MAXSPECSIZE = 1024; // [CI] defined locally in plugin Main.cpp")
+          Set-Content -Path $f -Value $c -NoNewline
+          if (-not (Select-String -Path $f -Pattern "^//const int MAXSPECSIZE" -Quiet)) {
+            throw "netnode.hpp patch failed - SDK layout changed?"
+          }
+
+      - name: Get IDA support libraries (..IDA_Support)
+        shell: pwsh
+        run: |
+          # The .vcxproj references ..\IDA_Support\Utility\Utility.cpp, so this
+          # must be cloned as a sibling of the checkout (inside the workspace parent)
+          git clone --depth 1 "https://github.com/$env:IDA_SUPPORT_REPO.git" `
+            "$env:GITHUB_WORKSPACE\..\IDA_Support"
+
+      - name: Get Qt/MSBuild integration (${{ env.QT_VSADDIN_VERSION }})
+        shell: pwsh
+        run: |
+          $zip = "$env:RUNNER_TEMP\qt-vsaddin-msbuild-$env:QT_VSADDIN_VERSION.zip"
+          Invoke-WebRequest -Uri `
+            "https://download.qt.io/official_releases/vsaddin/$env:QT_VSADDIN_VERSION/qt-vsaddin-msbuild-$env:QT_VSADDIN_VERSION.zip" `
+            -OutFile $zip
+          Expand-Archive -Path $zip -DestinationPath "$env:GITHUB_WORKSPACE\deps\QtMsBuild" -Force
+
+      - name: Create user plugins dir (used by the project's post-build copy)
+        shell: pwsh
+        run: New-Item -ItemType Directory -Force "$env:APPDATA\Hex-Rays\IDA Pro\plugins" | Out-Null
+
+      - name: Build Release|x64
+        shell: pwsh
+        env:
+          _IDADIR: ${{ github.workspace }}\deps
+          IDASUPPORT: ${{ github.workspace }}\..\IDA_Support
+        run: |
+          $qt = "$env:GITHUB_WORKSPACE\deps\Qt\$env:QT_VERSION\msvc2022_64"
+          $msbuildArgs = @('IDA_ClassInformer.sln', '-m', '-nologo',
+            '-p:Configuration=Release', '-p:Platform=x64',
+            "-p:QtInstall=$qt",
+            "-p:QtMsBuild=$env:GITHUB_WORKSPACE\deps\QtMsBuild")
+          & msbuild @msbuildArgs
+          if ($LASTEXITCODE -ne 0) {
+            # Rare: AV can briefly lock the freshly linked DLL during the
+            # project's post-build copy step; one retry absorbs that.
+            Write-Host "::warning::msbuild failed (exit $LASTEXITCODE), retrying once"
+            Start-Sleep -Seconds 5
+            & msbuild @msbuildArgs
+          }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path "x64\Release\IDA_ClassInformer.dll")) {
+            throw "build output missing"
+          }
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IDA_ClassInformer-ida9.4-win64
+          path: |
+            x64/Release/IDA_ClassInformer.dll
+            x64/Release/IDA_ClassInformer.pdb
+          if-no-files-found: error
